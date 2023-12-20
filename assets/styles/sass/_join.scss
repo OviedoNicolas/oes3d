@@ -1,0 +1,35 @@
+.main-join{
+    background-image: url("../images/carbk.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+    padding: 150px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.join-body{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 1240px;
+}
+
+.join-title{
+    color: $vio-p;
+    font-size: 38px;
+    padding: 12px 0px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.join-textCont{
+    width:450px;
+}
+
+.join-text{
+    font-size: 18px;
+    line-height: 35px;
+    font-weight: 400;
+}

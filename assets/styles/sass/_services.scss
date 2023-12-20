@@ -1,0 +1,175 @@
+.main-services{
+    width: 100%;
+    background-color: #5d0672;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 0px 0px 0px;
+}
+
+.services-title{
+    color: $white;
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.services-text{
+    color: $white;
+    font-size: 21px;
+    margin-bottom: 65px;
+}
+
+.services-body{
+    display: flex;
+    margin-top: 35px;
+}
+
+.services-seCont{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 65px 50px 25px;
+    flex: 1;
+    position: relative;
+}
+
+.services-num{
+    font-size: 30px;
+    color: $white;
+    border: 2px solid $white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    top: -28px;
+}
+
+.services-seTitle{
+    color: $white;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.services-seText{
+    color: $white;
+    font-size: 18px;
+    line-height: 35px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.services-seCont:nth-of-type(1){
+    background-color: #700c89;
+    
+    .services-num{
+        background-color: #700c89;
+    }
+}
+
+.services-seCont:nth-of-type(2){
+    background-color: #80109b;
+
+    .services-num{
+        background-color: #80109b;
+    }
+    
+}
+
+.services-seCont:nth-of-type(3){
+    background-color: #9b1cbb;
+
+    .services-num{
+        background-color: #9b1cbb;
+    }
+}
+
+.services-seCont:nth-of-type(4){
+    background-color: #a52ecc;
+
+    .services-num{
+        background-color: #a52ecc;
+    }
+    
+}
+
+.services-seCont:nth-of-type(5){
+    background-color: #c162d8;
+    
+    .services-num{
+        background-color: #c162d8;
+    }
+}
+
+.services-abCar{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: url("../images/servBK.jpg");
+        background-size: cover;
+        background-position: right;
+        filter: grayscale(1);
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        backdrop-filter: brightness(0.3);
+        filter: brightness(0.5);
+    }
+}
+
+.services-abCarCont{
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-content: center;
+    width: 1240px;
+    padding: 80px 0px;
+    justify-items: center;
+}
+
+.services-abCarTitle{
+    color: $white;
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.services-abCarText{
+    color: $white;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.services-abCarList{
+    color: $white;
+    line-height: 75px;
+}
+
+.services-abCarItem{
+    font-size: 21px;
+}

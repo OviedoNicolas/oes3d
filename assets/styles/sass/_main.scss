@@ -1,0 +1,12 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+@import "hero";
+@import "about";
+@import "join";
+@import "whyCh";
+@import "services";

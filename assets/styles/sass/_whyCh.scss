@@ -1,0 +1,87 @@
+.main-whyCh{
+    background-color: #111111;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 0px;
+
+    &::after{
+        content: "";
+        background-image: url(../images/carPL.svg);
+        background-repeat: no-repeat;
+        width: 100%;
+        opacity: 0.2;
+        position: absolute;
+        top: 0;
+        left: -400px;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.whych-body{
+    width: 1240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+    position: relative;
+    z-index: 10;
+}
+
+.whych-title{
+    color: $white;
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.whych-raBody{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 120px 20px;
+}
+
+.whych-raCont{
+    position: relative;
+    width: 400px;
+    background-color: #252525da;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 95px 35px 50px 35px;
+    gap: 25px;
+    box-shadow: 0px 15px 10px $black;
+    aspect-ratio: 1/1.05;
+}
+
+.whych-raImgCont{
+    background-color: #252525;
+    position: absolute;
+    top: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1/1;
+    padding: 20px;
+    border: 2px solid $white;
+    border-radius: 50%;
+}
+
+.whych-raTitle{
+    color: $vio-p;
+    font-size: 24px;
+    font-weight: 900;
+    text-shadow: 2px 2px 5px #1a1a1a;
+}
+
+.whych-raText{
+    color: $white;
+    font-size: 18px;
+    line-height: 35px;
+}
