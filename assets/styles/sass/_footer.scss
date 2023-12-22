@@ -1,0 +1,94 @@
+.footer{
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0px;
+    width: 100%;
+    gap: 75px;
+}
+
+.footer-body{
+    width: 1240px;
+    display: grid;
+    grid-template-columns: 1fr .5fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-imgCont{
+    width: 250px;
+}
+
+.footer-navbar-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+}
+
+.footer-navbar-item{
+    font-size: 21px;
+    list-style-type: none;
+}
+
+.footer-navbar-link{
+    color: $white;
+    cursor: pointer;
+
+    &:hover{
+        color: $grey;
+    }
+}
+
+.footer-buhCont{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-buhPres{
+    color: $white;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.footer-buhHours{
+    color: $white;
+    font-size: 21px;
+    font-weight: 500;
+
+    span{
+        font-weight: 200;
+    }
+}
+
+.footer-chiCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.chi-imgCont{
+    width: 40px;
+}
+
+.chi-text{
+    color: $white;
+    font-size: 16px;
+}
+
+.footer-buhHoursCont{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.buhHoursImgCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+}

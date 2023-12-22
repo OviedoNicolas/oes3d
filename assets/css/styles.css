@@ -198,7 +198,7 @@ a {
   font-size: 20px;
   width: 640px;
   line-height: 33px;
-  font-weight: 200;
+  font-weight: 300;
 }
 .hero-text span {
   font-weight: 700;
@@ -644,4 +644,293 @@ a {
 
 .services-abCarItem {
   font-size: 21px;
+}
+
+.main-whyCar {
+  background: #4C2D63;
+  background: radial-gradient(at left top, #4C2D63, #B09CCD);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 0;
+}
+.main-whyCar::after {
+  content: "";
+  background-image: url(../images/Xx.svg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-position: center right;
+  right: 3%;
+  opacity: 0.2;
+}
+
+.whyCar-title {
+  color: #fff;
+  font-size: 38px;
+  padding: 12px 0px;
+  font-weight: 800;
+}
+
+.whyCar-raCont {
+  width: 1240px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.whyCar-ra {
+  width: 100%;
+  border: 1.5px solid #fff;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-rows: 30px 1fr;
+  gap: 25px;
+  transition: all 0.2s linear;
+}
+.whyCar-ra::marker {
+  color: #fff;
+}
+
+.whyCar-ra.expanded {
+  grid-template-rows: 30px 0fr;
+  gap: 0px;
+}
+
+.whyCar-raTextCont {
+  overflow: hidden;
+}
+
+.whyCar-raNum {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.whyCar-raTitle {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.whyCar-raTitlebar {
+  display: grid;
+  grid-template-columns: 2fr 70fr 1fr;
+  align-items: center;
+}
+
+.whyCar-raImgCont {
+  width: 10px;
+}
+
+.whyCar-raText {
+  color: #fff;
+  font-size: 18px;
+  line-height: 35px;
+}
+
+.main-midBanner {
+  width: 100%;
+  padding: 90px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/oes3dbanner.jpg");
+}
+
+.midBanner-body {
+  width: 1240px;
+}
+
+.midBanner-text {
+  color: #000;
+  font-size: 24px;
+  line-height: 45px;
+  width: 50%;
+}
+
+.main-contact {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cu-body {
+  display: flex;
+  flex-direction: column;
+  width: 620px;
+  padding: 90px 120px 90px 0px;
+  justify-self: end;
+}
+
+.cu-title {
+  color: #6F0C88;
+  font-size: 38px;
+  padding: 12px 0px;
+  font-weight: 800;
+}
+
+.cu-text {
+  color: #000;
+  font-size: 24px;
+  line-height: 45px;
+  margin-top: 20px;
+}
+
+.git-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 90px 0px 90px 30px;
+  justify-self: start;
+  background-color: #6F0C88;
+}
+
+.git-title {
+  color: #fff;
+  font-size: 38px;
+  padding: 12px 0px;
+  font-weight: 800;
+}
+
+.git-ciBody {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.git-ciCont {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  align-items: center;
+  grid-template-areas: "img ciCam" "img ciInfo";
+}
+
+.git-imgCont {
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1/1;
+  padding: 8px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: img;
+}
+
+.git-ciCam {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 500;
+  grid-area: ciCam;
+}
+
+.git-ciInfo {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 300;
+  grid-area: ciInfo;
+}
+
+.footer {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 0px;
+  width: 100%;
+  gap: 75px;
+}
+
+.footer-body {
+  width: 1240px;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-imgCont {
+  width: 250px;
+}
+
+.footer-navbar-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+}
+
+.footer-navbar-item {
+  font-size: 21px;
+  list-style-type: none;
+}
+
+.footer-navbar-link {
+  color: #fff;
+  cursor: pointer;
+}
+.footer-navbar-link:hover {
+  color: #8a8a8a;
+}
+
+.footer-buhCont {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footer-buhPres {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.footer-buhHours {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 500;
+}
+.footer-buhHours span {
+  font-weight: 200;
+}
+
+.footer-chiCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.chi-imgCont {
+  width: 40px;
+}
+
+.chi-text {
+  color: #fff;
+  font-size: 16px;
+}
+
+.footer-buhHoursCont {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.buhHoursImgCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
 }/*# sourceMappingURL=styles.css.map */

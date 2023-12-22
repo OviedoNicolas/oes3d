@@ -1,0 +1,85 @@
+.main-contact{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cu-body{
+    display: flex;
+    flex-direction: column;
+    width: 620px;
+    padding: 90px 120px 90px 0px;
+    justify-self: end;
+}
+
+.cu-title{
+    color: $vio-p;
+    font-size: 38px;
+    padding: 12px 0px;
+    font-weight: 800;
+}
+
+.cu-text{
+    color: $black;
+    font-size: 24px;
+    line-height: 45px;
+    margin-top: 20px;
+}
+
+.git-body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 90px 0px 90px 30px;
+    justify-self: start;
+    background-color: $vio-p;
+}
+
+.git-title{
+    color: $white;
+    font-size: 38px;
+    padding: 12px 0px;
+    font-weight: 800;
+}
+
+.git-ciBody{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.git-ciCont{
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    grid-template-areas: "img ciCam"
+                        "img ciInfo";
+}
+
+.git-imgCont{
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1/1;
+    padding: 8px;
+    border-radius: 50%;
+    border: 2px solid $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: img;
+}
+
+.git-ciCam{
+    color: $white;
+    font-size: 26px;
+    font-weight: 500;
+    grid-area: ciCam;
+}
+
+.git-ciInfo{
+    color: $white;
+    font-size: 21px;
+    font-weight: 300;
+    grid-area: ciInfo;
+}
