@@ -14,3 +14,20 @@ document.addEventListener('scroll', () => {
         DOM_header.classList.remove('scrolled');
     };
 });
+
+
+let titleBars = document.querySelectorAll(".whyCar-raTitlebar");
+
+titleBars.forEach(titleBar => {
+    titleBar.addEventListener("click", () => {
+        let textCont = titleBar.parentElement;
+
+        document.querySelectorAll(".whyCar-ra").forEach(element => {
+            if (element === textCont) {
+                element.classList.toggle("expanded");
+            } else {
+                element.classList.remove("expanded");
+            }
+        });
+    });
+});

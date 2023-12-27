@@ -112,7 +112,7 @@ a {
 
 .navbar-link {
   color: #fff;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 600;
 }
 .navbar-link:hover {
@@ -654,9 +654,10 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 90px 0;
+  padding: 90px 0 150px 0;
+  position: relative;
 }
-.main-whyCar::after {
+.main-whyCar::before {
   content: "";
   background-image: url(../images/Xx.svg);
   width: 100%;
@@ -664,7 +665,8 @@ a {
   position: absolute;
   background-repeat: no-repeat;
   background-size: 250px;
-  background-position: center right;
+  background-position: right;
+  background-position-y: 160px;
   right: 3%;
   opacity: 0.2;
 }
@@ -676,13 +678,19 @@ a {
   font-weight: 800;
 }
 
+.whyCar-raBody {
+  position: relative;
+  width: 1240px;
+  height: 415px;
+}
+
 .whyCar-raCont {
   width: 1240px;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  position: relative;
+  position: absolute;
   z-index: 10;
 }
 
@@ -691,17 +699,17 @@ a {
   border: 1.5px solid #fff;
   padding: 10px 20px;
   display: grid;
-  grid-template-rows: 30px 1fr;
-  gap: 25px;
-  transition: all 0.2s linear;
+  grid-template-rows: 30px 0fr;
+  gap: 0px;
+  transition: all 0.25s linear;
 }
 .whyCar-ra::marker {
   color: #fff;
 }
 
 .whyCar-ra.expanded {
-  grid-template-rows: 30px 0fr;
-  gap: 0px;
+  grid-template-rows: 30px 1fr;
+  gap: 25px;
 }
 
 .whyCar-raTextCont {
@@ -718,17 +726,22 @@ a {
   color: #fff;
   font-size: 24px;
   font-weight: 900;
-  cursor: pointer;
 }
 
 .whyCar-raTitlebar {
   display: grid;
   grid-template-columns: 2fr 70fr 1fr;
   align-items: center;
+  cursor: pointer;
 }
 
 .whyCar-raImgCont {
   width: 10px;
+  transition: all 0.25s linear;
+}
+
+.whyCar-ra.expanded .whyCar-raImgCont {
+  transform: rotate(90deg);
 }
 
 .whyCar-raText {
