@@ -27,7 +27,6 @@ a{
 .button{
     font-family: $fuente-titulo;
     color: $white;
-    font-size: 15px;
     font-weight: 900;
     text-transform: uppercase;
     background-color: $vio-p;
@@ -35,7 +34,7 @@ a{
     align-items: center;
     justify-content: center;
     width: 120px;
-    height: 40px;
+    aspect-ratio: 3/1;
     cursor: pointer;
     
     &:hover{
