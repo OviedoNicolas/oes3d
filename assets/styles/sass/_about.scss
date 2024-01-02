@@ -10,41 +10,73 @@
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: 590px;
+
+    @media only screen and (max-width: 844px) {
+        background-size: 80%;
+        padding: 70px 0px;
+    }
 }
 
 .about-body{
-    width: 1240px;
+    width: 90%;
+    max-width: 1240px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 844px) {
+        gap: 60px;
+    }
 }
 
 .about-title{
     color: $white;
-    font-size: 38px;
+    font-size: $text2638;
     padding: 12px 0px;
     font-weight: 800;
+
+    @media only screen and (max-width: 844px) {
+        text-align: center;
+    }
 }
 
 .about-missionTitle{
     color: $white;
-    font-size: 38px;
+    font-size: $text2638;
     padding: 12px 0px;
     font-weight: 800;
+
+    @media only screen and (max-width: 844px) {
+        text-align: center;
+    }
 }
 
 .about-cont {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .about-missionCont{
     flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .about-text{
     color: $white;
-    font-size: 18px;
+    font-size: $text1418;
     line-height: 35px;
     font-weight: 300;
-    width: 500px;
+    min-width: 350px;
+
+    @media only screen and (max-width: 844px) {
+        text-align: center;
+    }
 
     &:first-of-type{
         margin-bottom: 45px;
@@ -53,8 +85,12 @@
 
 .about-missionText{
     color: $white;
-    font-size: 18px;
+    font-size: $text1418;
     line-height: 35px;
     font-weight: 300;
-    width: 500px;
+    min-width: 350px;
+
+    @media only screen and (max-width: 844px) {
+        text-align: center;
+    }
 }

@@ -223,12 +223,13 @@ input:checked + div span.line-2 {
   padding-bottom: 86px;
   padding-top: 175px;
   width: 100%;
+  height: 100vh;
 }
 .main-hero::before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 85%;
+  height: 100%;
   top: 0;
   left: 0;
   background-image: url("../images/heroph.jpg");
@@ -241,7 +242,7 @@ input:checked + div span.line-2 {
   content: "";
   position: absolute;
   width: 100%;
-  height: 85%;
+  height: 100%;
   top: 0;
   left: 0;
   backdrop-filter: brightness(0.3);
@@ -281,7 +282,7 @@ input:checked + div span.line-2 {
 
 .hero-text {
   color: #fff;
-  font-size: clamp(12px, 2vw, 20px);
+  font-size: clamp(14px, 2vw, 20px);
   width: 90%;
   max-width: 640px;
   line-height: 33px;
@@ -396,40 +397,77 @@ input:checked + div span.line-2 {
   background-position: left bottom;
   background-size: 590px;
 }
+@media only screen and (max-width: 844px) {
+  .main-about {
+    background-size: 80%;
+    padding: 70px 0px;
+  }
+}
 
 .about-body {
-  width: 1240px;
+  width: 90%;
+  max-width: 1240px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 844px) {
+  .about-body {
+    gap: 60px;
+  }
 }
 
 .about-title {
   color: #fff;
-  font-size: 38px;
+  font-size: clamp(26px, 5vw, 38px);
   padding: 12px 0px;
   font-weight: 800;
+}
+@media only screen and (max-width: 844px) {
+  .about-title {
+    text-align: center;
+  }
 }
 
 .about-missionTitle {
   color: #fff;
-  font-size: 38px;
+  font-size: clamp(26px, 5vw, 38px);
   padding: 12px 0px;
   font-weight: 800;
+}
+@media only screen and (max-width: 844px) {
+  .about-missionTitle {
+    text-align: center;
+  }
 }
 
 .about-cont {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .about-missionCont {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .about-text {
   color: #fff;
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
   line-height: 35px;
   font-weight: 300;
-  width: 500px;
+  min-width: 350px;
+}
+@media only screen and (max-width: 844px) {
+  .about-text {
+    text-align: center;
+  }
 }
 .about-text:first-of-type {
   margin-bottom: 45px;
@@ -437,46 +475,74 @@ input:checked + div span.line-2 {
 
 .about-missionText {
   color: #fff;
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
   line-height: 35px;
   font-weight: 300;
-  width: 500px;
+  min-width: 350px;
+}
+@media only screen and (max-width: 844px) {
+  .about-missionText {
+    text-align: center;
+  }
 }
 
 .main-join {
   background-image: url("../images/carBK.webp");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: bottom right;
+  background-position: center right;
   padding: 150px 0px;
   width: 100%;
   display: flex;
   justify-content: center;
+}
+@media only screen and (max-width: 844px) {
+  .main-join {
+    padding: 80px 0px;
+    background-size: 175%;
+  }
 }
 
 .join-body {
   display: flex;
   align-items: center;
   justify-content: start;
-  width: 1240px;
+  max-width: 1240px;
+  width: 90%;
+}
+@media only screen and (max-width: 844px) {
+  .join-body {
+    justify-content: center;
+  }
 }
 
 .join-title {
   color: #6F0C88;
-  font-size: 38px;
+  font-size: clamp(26px, 5vw, 38px);
   padding: 12px 0px;
   font-weight: 800;
   margin-bottom: 25px;
 }
+@media only screen and (max-width: 844px) {
+  .join-title {
+    text-align: center;
+  }
+}
 
 .join-textCont {
-  width: 450px;
+  max-width: 450px;
+  width: 90%;
 }
 
 .join-text {
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
   line-height: 35px;
   font-weight: 400;
+}
+@media only screen and (max-width: 844px) {
+  .join-text {
+    text-align: center;
+  }
 }
 
 .main-whyCh {

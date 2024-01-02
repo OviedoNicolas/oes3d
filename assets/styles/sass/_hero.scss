@@ -7,12 +7,13 @@
     padding-bottom: 86px;
     padding-top: 175px;
     width: 100%;
+    height: 100vh;
 
     &::before{
         content: "";
         position: absolute;
         width: 100%;
-        height: 85%;
+        height: 100%;
         top: 0;
         left: 0;
         background-image: url("../images/heroph.jpg");
@@ -26,7 +27,7 @@
         content: "";
         position: absolute;
         width: 100%;
-        height: 85%;
+        height: 100%;
         top: 0;
         left: 0;
         backdrop-filter: brightness(0.3);
