@@ -223,7 +223,7 @@ input:checked + div span.line-2 {
   padding-bottom: 86px;
   padding-top: 175px;
   width: 100%;
-  height: 100vh;
+  height: 95vh;
 }
 .main-hero::before {
   content: "";
@@ -487,6 +487,7 @@ input:checked + div span.line-2 {
 }
 
 .main-join {
+  background-color: #6F0C88;
   background-image: url("../images/carBK.webp");
   background-repeat: no-repeat;
   background-size: contain;
