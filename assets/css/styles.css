@@ -223,8 +223,7 @@ input:checked + div span.line-2 {
   padding-bottom: 86px;
   padding-top: 175px;
   width: 100%;
-  height: 95vh;
-  min-height: 780px;
+  position: relative;
 }
 .main-hero::before {
   content: "";
@@ -233,6 +232,7 @@ input:checked + div span.line-2 {
   height: 100%;
   top: 0;
   left: 0;
+  background-color: #6F0C88;
   background-image: url("../images/heroph.jpg");
   background-size: cover;
   background-position: left;
@@ -291,7 +291,7 @@ input:checked + div span.line-2 {
 }
 .hero-text span {
   font-weight: 700;
-  font-size: clamp(14px, 2vw, 22px);
+  font-size: clamp(14px, 3vw, 22px);
 }
 .hero-text br {
   margin-bottom: 35px;
@@ -392,7 +392,7 @@ input:checked + div span.line-2 {
   justify-content: center;
   width: 100%;
   position: relative;
-  padding: 90px 0px;
+  padding: clamp(70px, 10vw, 90px) 0px;
   background-image: url(../images/oes3dthin.svg);
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -401,7 +401,6 @@ input:checked + div span.line-2 {
 @media only screen and (max-width: 844px) {
   .main-about {
     background-size: 80%;
-    padding: 70px 0px;
   }
 }
 
@@ -409,7 +408,7 @@ input:checked + div span.line-2 {
   width: 90%;
   max-width: 1240px;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
@@ -463,7 +462,7 @@ input:checked + div span.line-2 {
   font-size: clamp(14px, 2vw, 18px);
   line-height: 35px;
   font-weight: 300;
-  min-width: 350px;
+  min-width: 320px;
 }
 @media only screen and (max-width: 844px) {
   .about-text {
@@ -479,7 +478,7 @@ input:checked + div span.line-2 {
   font-size: clamp(14px, 2vw, 18px);
   line-height: 35px;
   font-weight: 300;
-  min-width: 350px;
+  min-width: 320px;
 }
 @media only screen and (max-width: 844px) {
   .about-missionText {
@@ -553,7 +552,7 @@ input:checked + div span.line-2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 90px 0px;
+  padding: clamp(70px, 10vw, 90px) 0px;
 }
 .main-whyCh::after {
   content: "";
@@ -567,9 +566,15 @@ input:checked + div span.line-2 {
   bottom: 0;
   right: 0;
 }
+@media only screen and (max-width: 844px) {
+  .main-whyCh::after {
+    left: -200px;
+  }
+}
 
 .whych-body {
-  width: 1240px;
+  width: 90%;
+  max-width: 1240px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -580,7 +585,7 @@ input:checked + div span.line-2 {
 
 .whych-title {
   color: #fff;
-  font-size: 38px;
+  font-size: clamp(26px, 5vw, 38px);
   font-weight: 800;
 }
 
@@ -589,11 +594,26 @@ input:checked + div span.line-2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 120px 20px;
+  justify-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 1240px) {
+  .whych-raBody {
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 844px) {
+  .whych-raBody {
+    grid-template-columns: 1fr;
+    width: 80%;
+  }
 }
 
 .whych-raCont {
   position: relative;
-  width: 400px;
+  width: 100%;
+  height: 420px;
   background-color: rgba(37, 37, 37, 0.8549019608);
   display: flex;
   flex-direction: column;
@@ -603,6 +623,21 @@ input:checked + div span.line-2 {
   gap: 25px;
   box-shadow: 0px 15px 10px #000;
   aspect-ratio: 1/1.05;
+}
+@media only screen and (max-width: 1240px) {
+  .whych-raCont {
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    padding: 75px 25px 30px 25px;
+    height: 380px;
+  }
+}
+@media only screen and (max-width: 844px) {
+  .whych-raCont {
+    grid-template-columns: 1fr;
+    width: 80%;
+    height: 350px;
+  }
 }
 
 .whych-raImgCont {
@@ -622,14 +657,14 @@ input:checked + div span.line-2 {
 
 .whych-raTitle {
   color: #6F0C88;
-  font-size: 24px;
+  font-size: clamp(16px, 3vw, 24px);
   font-weight: 900;
   text-shadow: 2px 2px 5px #1a1a1a;
 }
 
 .whych-raText {
   color: #fff;
-  font-size: 18px;
+  font-size: clamp(13px, 2vw, 18px);
   line-height: 35px;
 }
 
