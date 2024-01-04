@@ -491,10 +491,25 @@ input:checked + div span.line-2 {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center right;
-  padding: 150px 0px;
+  padding: clamp(90px, 10vw, 150px) 0px;
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: -1;
+}
+@media only screen and (max-width: 1000px) {
+  .main-join::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(1px);
+    filter: blur(3px);
+    z-index: -1;
+  }
 }
 @media only screen and (max-width: 844px) {
   .main-join {
@@ -675,25 +690,36 @@ input:checked + div span.line-2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 90px 0px 0px 0px;
+  padding: clamp(70px, 10vw, 90px) 0px 0px 0px;
 }
 
 .services-title {
   color: #fff;
-  font-size: 38px;
+  font-size: clamp(26px, 5vw, 38px);
   font-weight: 800;
   margin-bottom: 25px;
 }
 
 .services-text {
   color: #fff;
-  font-size: 21px;
+  font-size: clamp(14px, 3vw, 21px);
   margin-bottom: 65px;
+  text-align: center;
+}
+@media only screen and (max-width: 1100px) {
+  .services-text {
+    margin-bottom: 15px;
+  }
 }
 
 .services-body {
   display: flex;
   margin-top: 35px;
+}
+@media only screen and (max-width: 1100px) {
+  .services-body {
+    flex-direction: column;
+  }
 }
 
 .services-seCont {
@@ -704,6 +730,11 @@ input:checked + div span.line-2 {
   padding: 65px 50px 25px;
   flex: 1;
   position: relative;
+}
+@media only screen and (max-width: 1100px) {
+  .services-seCont {
+    padding: 90px 50px 25px;
+  }
 }
 
 .services-num {
@@ -721,16 +752,22 @@ input:checked + div span.line-2 {
   position: absolute;
   top: -28px;
 }
+@media only screen and (max-width: 1100px) {
+  .services-num {
+    top: 22px;
+  }
+}
 
 .services-seTitle {
   color: #fff;
-  font-size: 24px;
+  text-align: center;
+  font-size: clamp(16px, 3vw, 24px);
   font-weight: 900;
 }
 
 .services-seText {
   color: #fff;
-  font-size: 18px;
+  font-size: clamp(14px, 2vw, 18px);
   line-height: 35px;
   text-align: center;
   font-weight: 300;
@@ -787,7 +824,7 @@ input:checked + div span.line-2 {
   left: 0;
   background-image: url("../images/servBK.jpg");
   background-size: cover;
-  background-position: right;
+  background-position: center;
   filter: grayscale(1);
 }
 .services-abCar::after {
@@ -808,21 +845,30 @@ input:checked + div span.line-2 {
   grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-content: center;
-  width: 1240px;
+  width: 90%;
+  max-width: 1240px;
   padding: 80px 0px;
   justify-items: center;
+}
+@media only screen and (max-width: 844px) {
+  .services-abCarCont {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    width: 75%;
+    text-align: center;
+  }
 }
 
 .services-abCarTitle {
   color: #fff;
-  font-size: 34px;
+  font-size: clamp(23px, 5vw, 34px);
   font-weight: 800;
   margin-bottom: 25px;
 }
 
 .services-abCarText {
   color: #fff;
-  font-size: 16px;
+  font-size: clamp(13px, 2vw, 16px);
   font-weight: 300;
 }
 
@@ -830,9 +876,14 @@ input:checked + div span.line-2 {
   color: #fff;
   line-height: 75px;
 }
+@media only screen and (max-width: 844px) {
+  .services-abCarList {
+    line-height: 50px;
+  }
+}
 
 .services-abCarItem {
-  font-size: 21px;
+  font-size: clamp(14px, 3vw, 21px);
 }
 
 .main-whyCar {
@@ -843,8 +894,13 @@ input:checked + div span.line-2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 90px 0 150px 0;
+  padding: clamp(70px, 10vw, 90px) 0 150px 0;
   position: relative;
+}
+@media only screen and (max-width: 361px) {
+  .main-whyCar {
+    padding-bottom: 250px;
+  }
 }
 .main-whyCar::before {
   content: "";
@@ -862,19 +918,23 @@ input:checked + div span.line-2 {
 
 .whyCar-title {
   color: #fff;
-  font-size: 38px;
+  font-size: clamp(26px, 5vw, 38px);
   padding: 12px 0px;
   font-weight: 800;
+  text-align: center;
+  width: 90%;
 }
 
 .whyCar-raBody {
   position: relative;
-  width: 1240px;
+  width: 90%;
+  max-width: 1240px;
   height: 415px;
 }
 
 .whyCar-raCont {
-  width: 1240px;
+  width: 100%;
+  max-width: 1240px;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -900,6 +960,11 @@ input:checked + div span.line-2 {
   grid-template-rows: 30px 1fr;
   gap: 25px;
 }
+@media only screen and (max-width: 844px) {
+  .whyCar-ra.expanded {
+    gap: 10px;
+  }
+}
 
 .whyCar-raTextCont {
   overflow: hidden;
@@ -907,13 +972,13 @@ input:checked + div span.line-2 {
 
 .whyCar-raNum {
   color: #fff;
-  font-size: 24px;
+  font-size: clamp(16px, 3vw, 24px);
   font-weight: 900;
 }
 
 .whyCar-raTitle {
   color: #fff;
-  font-size: 24px;
+  font-size: clamp(16px, 3vw, 24px);
   font-weight: 900;
 }
 
@@ -935,7 +1000,7 @@ input:checked + div span.line-2 {
 
 .whyCar-raText {
   color: #fff;
-  font-size: 18px;
+  font-size: clamp(13px, 2vw, 18px);
   line-height: 35px;
 }
 
@@ -946,17 +1011,34 @@ input:checked + div span.line-2 {
   align-items: center;
   justify-content: center;
   background-image: url("../images/oes3dbanner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .midBanner-body {
-  width: 1240px;
+  width: 90%;
+  max-width: 1240px;
+}
+@media only screen and (max-width: 844px) {
+  .midBanner-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .midBanner-text {
   color: #000;
-  font-size: 24px;
+  font-size: clamp(16px, 3vw, 24px);
   line-height: 45px;
   width: 50%;
+}
+@media only screen and (max-width: 844px) {
+  .midBanner-text {
+    text-align: center;
+    width: 90%;
+  }
 }
 
 .main-contact {

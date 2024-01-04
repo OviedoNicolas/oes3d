@@ -5,15 +5,31 @@
     align-items: center;
     justify-content: center;
     background-image: url("../images/oes3dbanner.jpg");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .midBanner-body{
-    width: 1240px;
+    width: 90%;
+    max-width: 1240px;
+
+    @media only screen and (max-width: 844px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
+
 
 .midBanner-text{
     color: $black;
-    font-size: 24px;
+    font-size: $text1624;
     line-height: 45px;
     width: 50%;
+
+    @media only screen and (max-width: 844px) {
+        text-align: center;
+        width: 90%;
+    }
 }
