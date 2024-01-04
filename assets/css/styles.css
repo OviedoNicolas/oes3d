@@ -54,6 +54,15 @@ a {
   background-color: #f1f1f1;
 }
 
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -897,7 +906,7 @@ input:checked + div span.line-2 {
   padding: clamp(70px, 10vw, 90px) 0 150px 0;
   position: relative;
 }
-@media only screen and (max-width: 361px) {
+@media only screen and (max-width: 593px) {
   .main-whyCar {
     padding-bottom: 250px;
   }
