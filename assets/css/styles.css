@@ -120,7 +120,9 @@ a {
 }
 @media only screen and (max-width: 996px) {
   .navbar-list {
-    display: none;
+    flex-direction: column;
+    position: absolute;
+    transform: translate(-100%);
   }
 }
 
@@ -1055,25 +1057,37 @@ input:checked + div span.line-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media only screen and (max-width: 844px) {
+  .main-contact {
+    grid-template-columns: 1fr;
+  }
+}
 
 .cu-body {
   display: flex;
   flex-direction: column;
-  width: 620px;
-  padding: 90px 120px 90px 0px;
+  width: 90%;
+  max-width: 620px;
+  padding: 90px clamp(40px, 7vw, 120px) 90px 0px;
   justify-self: end;
+}
+@media only screen and (max-width: 844px) {
+  .cu-body {
+    justify-self: center;
+    padding: 75px 0 75px 0;
+  }
 }
 
 .cu-title {
   color: #6F0C88;
-  font-size: 38px;
+  font-size: clamp(26px, 5vw, 38px);
   padding: 12px 0px;
   font-weight: 800;
 }
 
 .cu-text {
   color: #000;
-  font-size: 24px;
+  font-size: clamp(16px, 3vw, 24px);
   line-height: 45px;
   margin-top: 20px;
 }
@@ -1086,10 +1100,21 @@ input:checked + div span.line-2 {
   justify-self: start;
   background-color: #6F0C88;
 }
+@media only screen and (max-width: 844px) {
+  .git-body {
+    padding: 75px 0 75px 0;
+    align-items: center;
+  }
+}
+
+.git-bodyAux {
+  width: 90%;
+  max-width: 620px;
+}
 
 .git-title {
   color: #fff;
-  font-size: 38px;
+  font-size: clamp(26px, 5vw, 38px);
   padding: 12px 0px;
   font-weight: 800;
 }
@@ -1123,14 +1148,14 @@ input:checked + div span.line-2 {
 
 .git-ciCam {
   color: #fff;
-  font-size: 26px;
+  font-size: clamp(18px, 4vw, 26px);
   font-weight: 500;
   grid-area: ciCam;
 }
 
 .git-ciInfo {
   color: #fff;
-  font-size: 21px;
+  font-size: clamp(14px, 3vw, 21px);
   font-weight: 300;
   grid-area: ciInfo;
 }
@@ -1147,15 +1172,25 @@ input:checked + div span.line-2 {
 }
 
 .footer-body {
-  width: 1240px;
+  width: 90%;
+  max-width: 1240px;
   display: grid;
+  grid-template-areas: "img nav tim";
   grid-template-columns: 1fr 0.5fr 1fr;
   align-items: center;
   justify-content: space-between;
 }
+@media only screen and (max-width: 844px) {
+  .footer-body {
+    grid-template-areas: "nav tim" "img img";
+    grid-template-columns: 0.5fr 1fr;
+    gap: 40px;
+  }
+}
 
 .footer-imgCont {
   width: 250px;
+  grid-area: img;
 }
 
 .footer-navbar-list {
@@ -1163,10 +1198,11 @@ input:checked + div span.line-2 {
   flex-direction: column;
   justify-content: center;
   gap: 7px;
+  grid-area: nav;
 }
 
 .footer-navbar-item {
-  font-size: 21px;
+  font-size: clamp(14px, 3vw, 21px);
   list-style-type: none;
 }
 
@@ -1182,17 +1218,18 @@ input:checked + div span.line-2 {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  grid-area: tim;
 }
 
 .footer-buhPres {
   color: #fff;
-  font-size: 21px;
+  font-size: clamp(14px, 3vw, 21px);
   font-weight: 600;
 }
 
 .footer-buhHours {
   color: #fff;
-  font-size: 21px;
+  font-size: clamp(14px, 3vw, 21px);
   font-weight: 500;
 }
 .footer-buhHours span {
@@ -1212,7 +1249,7 @@ input:checked + div span.line-2 {
 
 .chi-text {
   color: #fff;
-  font-size: 16px;
+  font-size: clamp(13px, 2vw, 16px);
 }
 
 .footer-buhHoursCont {

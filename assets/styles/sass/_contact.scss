@@ -2,26 +2,36 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @media only screen and (max-width: 844px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .cu-body{
     display: flex;
     flex-direction: column;
-    width: 620px;
-    padding: 90px 120px 90px 0px;
+    width: 90%;
+    max-width: 620px;
+    padding: 90px clamp(40px, 7vw, 120px) 90px 0px;
     justify-self: end;
+
+    @media only screen and (max-width: 844px) {
+        justify-self: center;
+        padding: 75px 0 75px 0;
+    }
 }
 
 .cu-title{
     color: $vio-p;
-    font-size: 38px;
+    font-size: $text2638;
     padding: 12px 0px;
     font-weight: 800;
 }
 
 .cu-text{
     color: $black;
-    font-size: 24px;
+    font-size: $text1624;
     line-height: 45px;
     margin-top: 20px;
 }
@@ -33,11 +43,21 @@
     padding: 90px 0px 90px 30px;
     justify-self: start;
     background-color: $vio-p;
+
+    @media only screen and (max-width: 844px) {
+        padding: 75px 0 75px 0;
+        align-items: center;
+    }
+}
+
+.git-bodyAux{
+    width: 90%;
+    max-width: 620px;
 }
 
 .git-title{
     color: $white;
-    font-size: 38px;
+    font-size: $text2638;
     padding: 12px 0px;
     font-weight: 800;
 }
@@ -72,14 +92,14 @@
 
 .git-ciCam{
     color: $white;
-    font-size: 26px;
+    font-size: $text1826;
     font-weight: 500;
     grid-area: ciCam;
 }
 
 .git-ciInfo{
     color: $white;
-    font-size: 21px;
+    font-size: $text1421;
     font-weight: 300;
     grid-area: ciInfo;
 }
