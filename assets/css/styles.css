@@ -123,6 +123,7 @@ a {
     flex-direction: column;
     position: absolute;
     transform: translate(-100%);
+    display: none;
   }
 }
 
@@ -244,21 +245,10 @@ input:checked + div span.line-2 {
   top: 0;
   left: 0;
   background-color: #6F0C88;
-  background-image: url("../images/heroph.jpg");
+  background-image: url("../images/4.png");
   background-size: cover;
   background-position: left;
   filter: grayscale(1);
-  z-index: -1;
-}
-.main-hero::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  backdrop-filter: brightness(0.3);
-  filter: blur(3px);
   z-index: -1;
 }
 
@@ -288,7 +278,7 @@ input:checked + div span.line-2 {
 .hero-title span {
   font-weight: 800;
   font-size: clamp(50px, 5vw, 75px);
-  color: #6F0C88;
+  color: #bb49d8;
   text-shadow: 2px 2px 5px #1a1a1a;
 }
 
@@ -459,6 +449,7 @@ input:checked + div span.line-2 {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  min-width: 360px;
 }
 
 .about-missionCont {
@@ -466,6 +457,7 @@ input:checked + div span.line-2 {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  min-width: 360px;
 }
 
 .about-text {
@@ -498,28 +490,15 @@ input:checked + div span.line-2 {
 }
 
 .main-join {
-  background-image: url("../images/carBK.webp");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center right;
   padding: clamp(90px, 10vw, 150px) 0px;
   width: 100%;
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: -1;
 }
 @media only screen and (max-width: 1000px) {
-  .main-join::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    backdrop-filter: blur(1px);
-    filter: blur(3px);
-    z-index: -1;
+  .main-join {
+    background-size: 80%;
   }
 }
 @media only screen and (max-width: 844px) {
@@ -530,15 +509,17 @@ input:checked + div span.line-2 {
 }
 
 .join-body {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  max-width: 1240px;
   width: 90%;
+  max-width: 1240px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 @media only screen and (max-width: 844px) {
   .join-body {
-    justify-content: center;
+    gap: 60px;
   }
 }
 
@@ -547,7 +528,6 @@ input:checked + div span.line-2 {
   font-size: clamp(26px, 5vw, 38px);
   padding: 12px 0px;
   font-weight: 800;
-  margin-bottom: 25px;
 }
 @media only screen and (max-width: 844px) {
   .join-title {
@@ -556,8 +536,18 @@ input:checked + div span.line-2 {
 }
 
 .join-textCont {
-  max-width: 450px;
-  width: 90%;
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.join-textAux {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 360px;
 }
 
 .join-text {
@@ -582,13 +572,12 @@ input:checked + div span.line-2 {
 }
 .main-whyCh::after {
   content: "";
-  background-image: url(../images/carPL.svg);
+  background-image: url(../images/5.png);
   background-repeat: no-repeat;
   width: 100%;
   opacity: 0.2;
   position: absolute;
   top: 0;
-  left: -400px;
   bottom: 0;
   right: 0;
 }
@@ -618,7 +607,8 @@ input:checked + div span.line-2 {
 .whych-raBody {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "ex ex qa qa cca cca" "cet cet cet td td td";
   gap: 120px 20px;
   justify-items: center;
   justify-content: center;
@@ -626,19 +616,42 @@ input:checked + div span.line-2 {
 @media only screen and (max-width: 1240px) {
   .whych-raBody {
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: "ex qa" "cca cet" "td td";
     width: 90%;
   }
 }
 @media only screen and (max-width: 844px) {
   .whych-raBody {
     grid-template-columns: 1fr;
+    grid-template-areas: "ex" "qa" "cca" "cet" "td";
     width: 80%;
   }
+}
+
+#ex {
+  grid-area: ex;
+}
+
+#qa {
+  grid-area: qa;
+}
+
+#cca {
+  grid-area: cca;
+}
+
+#cet {
+  grid-area: cet;
+}
+
+#td {
+  grid-area: td;
 }
 
 .whych-raCont {
   position: relative;
   width: 100%;
+  max-width: 400px;
   height: 420px;
   background-color: rgba(37, 37, 37, 0.8549019608);
   display: flex;
@@ -821,6 +834,7 @@ input:checked + div span.line-2 {
 
 .services-abCar {
   width: 100%;
+  height: 535px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -833,68 +847,10 @@ input:checked + div span.line-2 {
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url("../images/servBK.jpg");
+  background-image: url("../images/3.png");
   background-size: cover;
   background-position: center;
   filter: grayscale(1);
-}
-.services-abCar::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  backdrop-filter: brightness(0.3);
-  filter: brightness(0.5);
-}
-
-.services-abCarCont {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
-  max-width: 1240px;
-  padding: 80px 0px;
-  justify-items: center;
-}
-@media only screen and (max-width: 844px) {
-  .services-abCarCont {
-    grid-template-columns: 1fr;
-    gap: 45px;
-    width: 75%;
-    text-align: center;
-  }
-}
-
-.services-abCarTitle {
-  color: #fff;
-  font-size: clamp(23px, 5vw, 34px);
-  font-weight: 800;
-  margin-bottom: 25px;
-}
-
-.services-abCarText {
-  color: #fff;
-  font-size: clamp(13px, 2vw, 16px);
-  font-weight: 300;
-}
-
-.services-abCarList {
-  color: #fff;
-  line-height: 75px;
-}
-@media only screen and (max-width: 844px) {
-  .services-abCarList {
-    line-height: 50px;
-  }
-}
-
-.services-abCarItem {
-  font-size: clamp(14px, 3vw, 21px);
 }
 
 .main-whyCar {
@@ -905,26 +861,13 @@ input:checked + div span.line-2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: clamp(70px, 10vw, 90px) 0 150px 0;
+  padding: clamp(70px, 10vw, 90px) 0 120px 0;
   position: relative;
 }
 @media only screen and (max-width: 593px) {
   .main-whyCar {
-    padding-bottom: 250px;
+    padding-bottom: 200px;
   }
-}
-.main-whyCar::before {
-  content: "";
-  background-image: url(../images/Xx.svg);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: 250px;
-  background-position: right;
-  background-position-y: 160px;
-  right: 3%;
-  opacity: 0.2;
 }
 
 .whyCar-title {
@@ -1017,14 +960,20 @@ input:checked + div span.line-2 {
 
 .main-midBanner {
   width: 100%;
+  height: 495px;
   padding: 90px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../images/oes3dbanner.jpg");
+  background-image: url("../images/3.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media only screen and (max-width: 844px) {
+  .main-midBanner {
+    height: 380px;
+  }
 }
 
 .midBanner-body {

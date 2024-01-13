@@ -9,13 +9,12 @@
 
     &::after{
         content: "";
-        background-image: url(../images/carPL.svg);
+        background-image: url(../images/5.png);
         background-repeat: no-repeat;
         width: 100%;
         opacity: 0.2;
         position: absolute;
         top: 0;
-        left: -400px;
         bottom: 0;
         right: 0;
 
@@ -45,25 +44,53 @@
 .whych-raBody{
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "ex ex qa qa cca cca"
+                        "cet cet cet td td td";
     gap: 120px 20px;
     justify-items: center;
     justify-content: center;
 
     @media only screen and (max-width: 1240px) {
         grid-template-columns: 1fr 1fr;
+        grid-template-areas: "ex qa"
+                            "cca cet"
+                            "td td";
         width: 90%;
     }
 
     @media only screen and (max-width: 844px) {
         grid-template-columns: 1fr;
+        grid-template-areas: "ex"
+                            "qa"
+                            "cca"
+                            "cet"
+                            "td"
+                            ;
         width: 80%;
     }
+}
+
+#ex{
+    grid-area: ex;
+}
+#qa{
+    grid-area: qa;
+}
+#cca{
+    grid-area: cca;
+}
+#cet{
+    grid-area: cet;
+}
+#td{
+    grid-area: td;
 }
 
 .whych-raCont{
     position: relative;
     width: 100%;
+    max-width: 400px;
     height: 420px;
     background-color: #252525da;
     display: flex;
