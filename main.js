@@ -2,31 +2,30 @@ let DOM_header = document.getElementById('header');
 let titleBars = document.querySelectorAll(".whyCar-raTitlebar");
 let DOM_navbar = document.querySelector('.navbar');
 let DOM_switch = document.querySelector('#switch');
+let navLinks = document.querySelectorAll('a[href^="#"]');
 
 
 const handleSwitch = () => {
     DOM_switch.addEventListener('click', () => {
         if (DOM_switch.checked) {
             DOM_navbar.classList.add('active');
+            document.body.style.overflowY = 'hidden';
         } else {
             DOM_navbar.classList.remove('active');
-        }
-        
-    })
+            document.body.style.overflowY = '';
+        };
+    });
     
 };
 
 const headerScroll = () => {
-    // Maneja el efecto de transparencia del header
     document.addEventListener('scroll', () => {
         
         let scrollValue = window.scrollY;
 
-        // Si el scroll supera los 100px se agrega otra clase que maneja los estilos
         if (scrollValue > 70){
             DOM_header.classList.add('scrolled');
         }
-        // Al bajar de los 100px la clase se quita
         else {
             DOM_header.classList.remove('scrolled');
         };
@@ -34,7 +33,6 @@ const headerScroll = () => {
 };
 
 const handleTitBar = () => {
-
     titleBars.forEach(titleBar => {
         titleBar.addEventListener("click", () => {
             let textCont = titleBar.parentElement;
@@ -50,10 +48,58 @@ const handleTitBar = () => {
     });
 };
 
+const sectionChange = (seccionId) => {
+    let seccion = document.getElementById(seccionId);
+    if (seccion) {
+        seccion.scrollIntoView({ behavior: "smooth" });
+        history.replaceState({ seccionId: seccionId }, "", "#" + seccionId);
+    };
+};
+
+const handleClick = (event) => {
+    event.preventDefault();
+    let seccionId = event.target.getAttribute("href").substring(1);
+    if (DOM_navbar.classList.contains('active')){
+        DOM_switch.checked = !DOM_switch.checked;
+        DOM_navbar.classList.remove('active');
+    };
+    sectionChange(seccionId);
+};
+
+const linksPrep = () =>{
+    for (let i = 0; i < navLinks.length; i++) {
+        navLinks[i].addEventListener("click", handleClick);
+    };
+};
+
+window.addEventListener("popstate", function (event) {
+    if (event.state && event.state.seccionId) {
+        let actualSection = document.getElementById(event.state.seccionId);
+        if (actualSection) {
+            if (document.documentElement.scrollTop > 0 || document.body.scrollTop > 0) {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        } else {
+            sectionChange(event.state.seccionId);
+        }
+    }
+    } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+});
+
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+};
+
+window.addEventListener("beforeunload", function (event) {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 const init = () => {
     headerScroll();
     handleTitBar();
     handleSwitch();
+    linksPrep();
 };
 
 init();
