@@ -5,14 +5,22 @@ let DOM_switch = document.querySelector('#switch');
 let navLinks = document.querySelectorAll('a[href^="#"]');
 
 
+const openMenu = () => {
+    DOM_navbar.classList.add('active');
+    document.body.style.overflowY = 'hidden';
+};
+
+const closeMenu = () => {
+    DOM_navbar.classList.remove('active');
+    document.body.style.overflowY = '';
+};
+
 const handleSwitch = () => {
     DOM_switch.addEventListener('click', () => {
         if (DOM_switch.checked) {
-            DOM_navbar.classList.add('active');
-            document.body.style.overflowY = 'hidden';
+            openMenu();
         } else {
-            DOM_navbar.classList.remove('active');
-            document.body.style.overflowY = '';
+            closeMenu();
         };
     });
     
@@ -56,19 +64,19 @@ const sectionChange = (seccionId) => {
     };
 };
 
-const handleClick = (event) => {
+const handleClickSection = (event) => {
     event.preventDefault();
     let seccionId = event.target.getAttribute("href").substring(1);
     if (DOM_navbar.classList.contains('active')){
         DOM_switch.checked = !DOM_switch.checked;
-        DOM_navbar.classList.remove('active');
+        closeMenu();
     };
     sectionChange(seccionId);
 };
 
 const linksPrep = () =>{
     for (let i = 0; i < navLinks.length; i++) {
-        navLinks[i].addEventListener("click", handleClick);
+        navLinks[i].addEventListener("click", handleClickSection);
     };
 };
 
