@@ -141,66 +141,9 @@
         height: 100%;
         top: 0;
         left: 0;
-        background-image: url("../images/3.png");
+        background-image: url("../images/3.webp");
         background-size: cover;
         background-position: center;
         filter: grayscale(1);
     }
-
-    // &::after{
-    //     content: "";
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 100%;
-    //     top: 0;
-    //     left: 0;
-    //     backdrop-filter: brightness(0.3);
-    //     filter: brightness(0.5);
-    // }
 }
-
-// .services-abCarCont{
-//     position: relative;
-//     z-index: 1;
-//     display: grid;
-//     grid-template-columns: 1fr 2fr;
-//     align-items: center;
-//     justify-content: center;
-//     width: 90%;
-//     max-width: 1240px;
-//     padding: 80px 0px;
-//     justify-items: center;
-
-//     @media only screen and (max-width: 844px) {
-//         grid-template-columns: 1fr;
-//         gap: 45px;
-//         width: 75%;
-//         text-align: center;
-//     }
-// }
-
-// .services-abCarTitle{
-//     color: $white;
-//     font-size: $text2334;
-//     font-weight: 800;
-//     margin-bottom: 25px;
-// }
-
-// .services-abCarText{
-//     color: $white;
-//     font-size: $text1316;
-//     font-weight: 300;
-// }
-
-// .services-abCarList{
-//     color: $white;
-//     line-height: 75px;
-
-//     @media only screen and (max-width: 844px) {
-//         line-height: 50px;
-//     }
-// }
-
-// .services-abCarItem{
-//     font-size: $text1421;
-// }

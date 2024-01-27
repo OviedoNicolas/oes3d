@@ -23,7 +23,6 @@ const handleSwitch = () => {
             closeMenu();
         };
     });
-    
 };
 
 const headerScroll = () => {

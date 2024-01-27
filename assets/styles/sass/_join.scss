@@ -1,8 +1,4 @@
 .main-join{
-    // background-image: url("../images/carBK.webp");
-    // background-repeat: no-repeat;
-    // background-size: contain;
-    // background-position: center right;
     padding: clamp(90px, 10vw, 150px) 0px;
     width: 100%;
     display: flex;
@@ -10,17 +6,6 @@
     position: relative;
 
     @media only screen and (max-width: 1000px) {
-        // &::after{
-        //     content: "";
-        //     position: absolute;
-        //     width: 100%;
-        //     height: 100%;
-        //     top: 0;
-        //     left: 0;
-        //     backdrop-filter: blur(1px);
-        //     filter: blur(3px);
-        //     z-index: -1;
-        // }
         background-size: 80%;
     }
 
