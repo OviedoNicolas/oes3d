@@ -64,6 +64,14 @@ a {
   user-select: none;
 }
 
+.btn-Whats {
+  width: clamp(50px, 5vw, 75px);
+  position: fixed;
+  bottom: 25px;
+  right: 15px;
+  z-index: 1;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -1161,6 +1169,10 @@ input:checked + div span.line-2 {
   font-size: clamp(14px, 3vw, 21px);
   font-weight: 300;
   grid-area: ciInfo;
+}
+
+.git-email {
+  text-decoration: underline;
 }
 
 .footer {
