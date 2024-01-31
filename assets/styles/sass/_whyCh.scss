@@ -82,16 +82,26 @@
 }
 #cet{
     grid-area: cet;
+    justify-self: flex-end;
+
+    @media only screen and (max-width: 1240px) {
+        justify-self: center;
+    }
 }
 #td{
     grid-area: td;
+    justify-self: flex-start;
+
+    @media only screen and (max-width: 1240px) {
+        justify-self: center;
+    }
 }
 
 .whych-raCont{
     position: relative;
     width: 100%;
     max-width: 400px;
-    height: 420px;
+    height: 375px;
     background-color: #252525da;
     display: flex;
     flex-direction: column;
@@ -106,7 +116,7 @@
         grid-template-columns: 1fr 1fr;
         width: 90%;
         padding: 75px 25px 30px 25px;
-        height: 380px;
+        height: 360px;
     }
 
     @media only screen and (max-width: 844px) {
@@ -141,5 +151,5 @@
 .whych-raText{
     color: $white;
     font-size: $text1318;
-    line-height: 35px;
+    line-height: 25px;
 }

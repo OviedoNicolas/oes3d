@@ -64,14 +64,6 @@ a {
   user-select: none;
 }
 
-.btn-Whats {
-  width: clamp(50px, 5vw, 75px);
-  position: fixed;
-  bottom: 25px;
-  right: 15px;
-  z-index: 1;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -346,7 +338,7 @@ input:checked + div span.line-2 {
   font-size: clamp(14px, 2vw, 20px);
   width: 90%;
   max-width: 640px;
-  line-height: 33px;
+  line-height: 25px;
   font-weight: 300;
 }
 .hero-text span {
@@ -524,7 +516,7 @@ input:checked + div span.line-2 {
 .about-text {
   color: #fff;
   font-size: clamp(14px, 2vw, 18px);
-  line-height: 35px;
+  line-height: 25px;
   font-weight: 300;
   min-width: 320px;
 }
@@ -540,7 +532,7 @@ input:checked + div span.line-2 {
 .about-missionText {
   color: #fff;
   font-size: clamp(14px, 2vw, 18px);
-  line-height: 35px;
+  line-height: 25px;
   font-weight: 300;
   min-width: 320px;
 }
@@ -614,7 +606,7 @@ input:checked + div span.line-2 {
 
 .join-text {
   font-size: clamp(14px, 2vw, 18px);
-  line-height: 35px;
+  line-height: 25px;
   font-weight: 400;
 }
 @media only screen and (max-width: 844px) {
@@ -704,17 +696,29 @@ input:checked + div span.line-2 {
 
 #cet {
   grid-area: cet;
+  justify-self: flex-end;
+}
+@media only screen and (max-width: 1240px) {
+  #cet {
+    justify-self: center;
+  }
 }
 
 #td {
   grid-area: td;
+  justify-self: flex-start;
+}
+@media only screen and (max-width: 1240px) {
+  #td {
+    justify-self: center;
+  }
 }
 
 .whych-raCont {
   position: relative;
   width: 100%;
   max-width: 400px;
-  height: 420px;
+  height: 375px;
   background-color: rgba(37, 37, 37, 0.8549019608);
   display: flex;
   flex-direction: column;
@@ -730,7 +734,7 @@ input:checked + div span.line-2 {
     grid-template-columns: 1fr 1fr;
     width: 90%;
     padding: 75px 25px 30px 25px;
-    height: 380px;
+    height: 360px;
   }
 }
 @media only screen and (max-width: 844px) {
@@ -766,7 +770,7 @@ input:checked + div span.line-2 {
 .whych-raText {
   color: #fff;
   font-size: clamp(13px, 2vw, 18px);
-  line-height: 35px;
+  line-height: 25px;
 }
 
 .main-services {
@@ -854,7 +858,7 @@ input:checked + div span.line-2 {
 .services-seText {
   color: #fff;
   font-size: clamp(14px, 2vw, 18px);
-  line-height: 35px;
+  line-height: 25px;
   text-align: center;
   font-weight: 300;
 }
@@ -1017,7 +1021,7 @@ input:checked + div span.line-2 {
 .whyCar-raText {
   color: #fff;
   font-size: clamp(13px, 2vw, 18px);
-  line-height: 35px;
+  line-height: 25px;
 }
 
 .main-midBanner {
@@ -1053,7 +1057,7 @@ input:checked + div span.line-2 {
 .midBanner-text {
   color: #000;
   font-size: clamp(16px, 3vw, 24px);
-  line-height: 45px;
+  line-height: 25px;
   width: 50%;
 }
 @media only screen and (max-width: 844px) {
@@ -1099,7 +1103,7 @@ input:checked + div span.line-2 {
 .cu-text {
   color: #000;
   font-size: clamp(16px, 3vw, 24px);
-  line-height: 45px;
+  line-height: 30px;
   margin-top: 20px;
 }
 
@@ -1107,7 +1111,7 @@ input:checked + div span.line-2 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 90px 0px 90px 30px;
+  padding: 90px 0px 90px 120px;
   justify-self: start;
   background-color: #6F0C88;
 }
